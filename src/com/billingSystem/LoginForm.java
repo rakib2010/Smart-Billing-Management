@@ -1,4 +1,3 @@
-
 package com.billingSystem;
 
 import java.sql.Connection;
@@ -8,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-
 public class LoginForm extends javax.swing.JFrame {
 
     /**
@@ -17,10 +15,9 @@ public class LoginForm extends javax.swing.JFrame {
     public LoginForm() {
         initComponents();
         setLocationRelativeTo(null);
-        
+
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -32,59 +29,74 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         loginbtn = new javax.swing.JButton();
         resetbtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1366, 767));
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/login ani.gif"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 260, 220, 110));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
 
-        user.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 400, 196, 30));
+        user.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        user.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 196, 40));
 
-        password.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 480, 196, 30));
+        password.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        password.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 196, 40));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Password");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, 114, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 114, 30));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("User Name");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 360, 114, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 114, 30));
 
-        loginbtn.setBackground(new java.awt.Color(22, 91, 22));
-        loginbtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        loginbtn.setBackground(java.awt.SystemColor.textHighlight);
+        loginbtn.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        loginbtn.setForeground(new java.awt.Color(255, 255, 255));
         loginbtn.setText("Login");
-        loginbtn.setBorder(null);
+        loginbtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         loginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginbtnActionPerformed(evt);
             }
         });
-        getContentPane().add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 530, 97, 40));
+        getContentPane().add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 97, 50));
 
-        resetbtn.setBackground(new java.awt.Color(255, 153, 153));
-        resetbtn.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        resetbtn.setText("Reset");
-        resetbtn.setBorder(null);
+        resetbtn.setBackground(new java.awt.Color(0, 102, 51));
+        resetbtn.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        resetbtn.setForeground(new java.awt.Color(255, 255, 255));
+        resetbtn.setText("Sign Up");
+        resetbtn.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         resetbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetbtnActionPerformed(evt);
             }
         });
-        getContentPane().add(resetbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 530, 81, 40));
+        getContentPane().add(resetbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 81, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/login background.PNG"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 750));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255,130));
+        jPanel1.setForeground(new java.awt.Color(206, 203, 203));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 370, 380));
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("www.rakib@gmail.com");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 420, 150, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/login background.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -92,51 +104,41 @@ public class LoginForm extends javax.swing.JFrame {
     private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rakib","root","123456");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rakib", "root", "123456");
             String sql = "select * from login where username = ? and password = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, user.getText());
             pst.setString(2, password.getText());
             ResultSet rs = pst.executeQuery();
-            
-            if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Login Successful");
+
+            if (rs.next()) {
                 HomeMenu hm = new HomeMenu();
                 hm.setVisible(true);
-            
-            
-            }else{
+                setVisible(false);
+
+            } else {
                 JOptionPane.showMessageDialog(null, "Username and Password doesn't match !!");
                 user.setText("");
                 password.setText("");
-            
-            
-            
+
             }
-            
-            
-            
-            
-            
-            
-            
-            
+
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        
-        
-        
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_loginbtnActionPerformed
 
     private void resetbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetbtnActionPerformed
-        user.setText("");
-        password.setText("");
+//        user.setText("");
+//        password.setText("");
+          new SignUp().setVisible(true);
+          setVisible(false);
+
+
+
+
     }//GEN-LAST:event_resetbtnActionPerformed
 
     /**
@@ -159,7 +161,7 @@ public class LoginForm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(LoginForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         //</editor-fold>
 
         /* Create and display the form */
@@ -173,6 +175,8 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginbtn;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton resetbtn;
